@@ -8,20 +8,20 @@ let arr = [
 
 function PrintDeveloperbyMap() {
   //Write your code here , just console.log
-  const developerNames = arr
-    .filter(({ profession }) => profession === "developer")
-    .map(({ name }) => name);
-
-  console.log(developerNames);
+  arr.map((e) => {
+    if(e.profession === "developer"){
+      console.log(e.name)
+    }
+  })
 }
 
 function PrintDeveloperbyForEach() {
   //Write your code here , just console.log
-  for (const { name, profession } of arr) {
-    if (profession === "developer") {
-      console.log(name);
+  arr.forEach((e) => {
+    if(e.profession === "developer"){
+      console.log(e.name)
     }
-  }
+  })
 }
 
 function addData() {
@@ -47,7 +47,7 @@ function addData() {
 
 function removeAdmin() {
   //Write your code here, just console.log
-  arr = arr.filter(({ profession }) => profession !== "admin");
+  arr = arr.filter((e) => e.profession !== "admin");
   console.log("Administrators have been removed.");
 }
 
@@ -56,21 +56,21 @@ function concatenateArray() {
   const newArr = [
     {
       id: arr.length + 1,
-      name: "Rahul",
-      age: 25,
-      profession: "developer",
+      name: "Adnan",
+      age: 24,
+      profession: "MD",
     },
     {
       id: arr.length + 2,
-      name: "Shubham",
-      age: 25,
+      name: "Ahmad",
+      age: 27,
       profession: "student",
     },
     {
       id: arr.length + 3,
-      name: "Sundram",
-      age: 25,
-      profession: "student",
+      name: "Azmi",
+      age: 28,
+      profession: "admin",
     },
   ];
 
